@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>Washington’s luckiest zip codes</h1>
+        <p>Click on the ZIP code to see 2017 lottery statistics broken out for scratch and jackpot games (Powerball, Lotto, Mega Millions, etc.) tickets.</p>
+      </section>
+    
+    <div class=buttonRow>
+        <input type="radio" name="layer-selection" id="winDraw" checked="checked">
+         <label for="winDraw">Jackpot games</label>
+        <input type="radio" name="layer-selection" id="winScratch">
+         <label for="winScratch">Scratch games</label>
+    </div>
+      
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map zoom=8>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          </leaflet-map>
+
+        </div>
+        <aside class="legend">
+          <h1>Winning tickets by ZIP code</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: #7F180D"></span> 25% and up</li>
+            <li>
+              <span class="block" style="background-color: #CA4317"></span> 21-24%</li>
+            <li>
+              <span class="block" style="background-color: #D6793A"></span> 16-20%</li>
+            <li>
+              <span class="block" style="background-color: #FFB37B"></span> 11-15%</li>
+            <li>
+              <span class="block" style="background-color: #FDD1AC"></span> 5-10%</li>
+          </ul>
+        </aside> 
+<!--       </div>
+            <div class="legend-label">% of winning tickets</div>
+            <ul class="legend">
+            </ul>
+        </div> -->
+
+        <div class="source">Source: Washington’s Lottery
+          <span class="credit">Emily M. Eng / THE SEATTLE TIMES</div>
+
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>
