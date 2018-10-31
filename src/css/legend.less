@@ -1,13 +1,15 @@
-aside.legend {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  padding: 6px 8px;
+.legend {
+    .display-flex();
   font-size: 12px;
   font-family: sans-serif;
   background: white;
   background: rgba(255,255,255,0.8);
   border-radius: 5px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+
   @media @tablet {
     position: relative;
     width: 100%;
@@ -16,51 +18,25 @@ aside.legend {
   }
   h1 {
     margin: 0;
-    padding: 5px 5px 5px 0;
+    padding: 0px 5px 5px 0;
     text-align: left;
     font-size: 14px;
     text-transform: uppercase;
     line-height: 1.5;
   }
-  ul.scale {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    overflow: auto;
-    padding-bottom: 8px;
-    li {
-      line-height: 18px;
-      margin-bottom: 2px;
-      @media @tablet {
-        float: left;
-        text-align: center;
-        width: 100% / @legend-length;
-      }
-    }
-    .block {
-      width: 2em;
-      height: 12px;
-      display: inline-block;
-      vertical-align: text-top;
-      opacity: .6;
-      @media @tablet {
-        display: block;
-        width: auto;
-      }
-    }
+
+  li {
+    display: block;
+    padding: 4px;
   }
-}
-.source {
-  font-size: 12px;
-  padding: 10px 0;
-  color: #999;
-  clear: both;
-  font-style: italic;
-  text-align: left;
-  .credit {
-    font-style: normal;
-    text-transform: uppercase;
+
+  .block {
+    width: 2em;
+    height: 16px;
+    margin-right: 4px;
     display: inline-block;
-    float: right;
+    vertical-align: text-bottom;
+    text-transform: lowercase;
+    opacity: .6;
   }
 }

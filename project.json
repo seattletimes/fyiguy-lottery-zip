@@ -5,8 +5,8 @@
       "path": "peripatetic-wasting"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2018/fyi-guy/lottery-zip"
     }
   },
   "title": "",
